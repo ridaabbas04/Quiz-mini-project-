@@ -1,0 +1,53 @@
+﻿score = 0
+
+
+questions = [
+    {
+        "question": "1. what does CPU stand for?",
+        "options": ["A. Central Process Unit", "B.Central Processing Unit", "C.Computer Personal Unit", "D.Central Processor Unit"],
+        "answer": "B"
+    },
+    {
+        "question": "2. who is known as the father of computer?",
+        "options": ["A. Charles Babbage", "B. Steve Jobs", "C. Bill Gates", "D. Mark Zuckerburg"],
+        "answer": "A"
+    },
+    {
+        "question": "3. what is the full form of RAM?",
+        "options": ["A. Random Access Memory", "B. Randomly Access Memory", "C. Run Aceapt Memory", "D. None of the above"],
+        "answer": "A"
+    },
+    {
+        "question": "4. what is the full form of ROM?",
+        "options": ["A. Read Only Memory", "B. Read Only Mode", "C. Read Only Machine", "D. None of the above"],
+        "answer": "A"
+    },
+    {
+        "question": "5. What is the full form of GUI?",
+        "options": ["A. Graphical User Interface", "B. Graphical User Input", "C. Graphical User Interface", "D. None of the above"],
+        "answer": "A"
+    }
+]
+
+
+for q in questions:
+    print("\n" + q["question"])
+    for opt in q["options"]:
+        print(opt)
+    user_answer = input("Enter your answer (A/B/C/D): ").upper()
+    if user_answer == q["answer"]:
+        print("Correct!")
+        score += 1
+    else:
+        print(f"Wrong! The correct answer is {q['answer']}")
+
+
+print(f"\nYour final score is: {score}/{len(questions)}")
+if score == len(questions):
+    print("Congratulations! You got all the questions right!")
+elif score >= 5:
+    print("Good job! You did well.")
+elif score >= 3:
+    print("Not bad, but you can do better.")
+else:
+    print("keep practicing and you will improve.")
